@@ -1,3 +1,11 @@
+# 作战方局部栈
+
+## 概念
+
+现在每个作战方可以独立保存一些栈。  
+使用栈基于 **索引值**，**索引值** 可以是 0 ~ 10000 的任意整数。  
+未处理存档。
+
 ## 入栈 <主动>
 
 位于 `rulesmd.ini`：
@@ -24,7 +32,7 @@ Effect.Type=StackPush
 ```ini
 [SomeBuffType]
 ; 效果种类相关属性
-Effect.ExtraCodeA=0                             ; 整数 , 用来决定栈的索引
+Effect.ExtraCodeA=0                             ; 整数 , 用来决定栈的索引 , 取值范围 : 0 ~ 10000 , 无效值默认为 0 , 默认值是 0
 Effect.Source=no                                ; yes/no , 决定栈被存储在哪一作战方 , 默认值是 no
                                                 ; yes = 栈存储在 Buff 来源的作战方
                                                 ; no = 栈存储在挂载此 Buff 的单位的作战方
@@ -66,7 +74,7 @@ Effect.Type=StackTop
 [SomeBuffType]
 ; 效果种类相关属性
 Effect.AcceptBuffs=                             ; Buff 列表 , 挂载这些 Buff , 没设置就不挂载
-Effect.ExtraCodeA=0                             ; 整数 , 用来决定栈的索引
+Effect.ExtraCodeA=0                             ; 整数 , 用来决定栈的索引 , 取值范围 : 0 ~ 10000 , 无效值默认为 0 , 默认值是 0
 Effect.Source=no                                ; yes/no , 决定栈被存储在哪一作战方 , 默认值是 no
                                                 ; yes = 栈存储在 Buff 来源的作战方
                                                 ; no = 栈存储在挂载此 Buff 的单位的作战方
@@ -107,7 +115,7 @@ Effect.Type=StackPop
 ```ini
 [SomeBuffType]
 ; 效果种类相关属性
-Effect.ExtraCodeA=0                             ; 整数 , 用来决定栈的索引
+Effect.ExtraCodeA=0                             ; 整数 , 用来决定栈的索引 , 取值范围 : 0 ~ 10000 , 无效值默认为 0 , 默认值是 0
 Effect.Source=no                                ; yes/no , 决定栈被存储在哪一作战方 , 默认值是 no
                                                 ; yes = 栈存储在 Buff 来源的作战方
                                                 ; no = 栈存储在挂载此 Buff 的单位的作战方
